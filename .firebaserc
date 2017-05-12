@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "staging": "eventmakr-vendors",
+    "default": "eventmakr-vendors"
+  }
+}

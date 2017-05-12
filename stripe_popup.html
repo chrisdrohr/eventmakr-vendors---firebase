@@ -1,0 +1,119 @@
+<!--<script src="https://js.stripe.com/v3/"></script>-->
+<!--<div class="modal" id="stripe-modal">-->
+  <!--<div class="modal-content">-->
+    <!--<div class="modal-header">-->
+      <!--<span class="close">&times;</span>-->
+      <!--<img class="logo-modal" src="../images/E-min.png"/>-->
+      <!--&lt;!&ndash;<h2>Modal Header</h2>&ndash;&gt;-->
+    <!--</div>-->
+    <!--<form class="form" id="stripe-form" action="/vendors" method="POST">-->
+      <!--<div class="group">-->
+        <!--<label class="label"><span class="span">Name</span>-->
+          <!--<input name="cardholder-name" class="field" placeholder="Jane Doe"/>-->
+        <!--</label>-->
+        <!--<label class="label"><span class="span">Email</span>-->
+          <!--<input name="email" class="field" placeholder="example@email.com"/>-->
+        <!--</label>-->
+          <!--<label class="label"><span class="span">Phone</span>-->
+            <!--<input class="field" placeholder="(123) 456-7890" type="tel"/>-->
+          <!--</label>-->
+      <!--</div>-->
+      <!--<div class="group">-->
+        <!--<label for="card-element" class="label"><span class="span">Card</span>-->
+          <!--<div id="card-element" class="field"></div>-->
+      <!--</div>-->
+      <!--<button class="button" type="submit">Pay</button>-->
+      <!--<div class="outcome">-->
+        <!--<div class="error" id="card-errors"></div>-->
+        <!--<div class="success">-->
+            <!--Success! Your Stripe token is <span class="token"></span>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</form>-->
+  <!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+
+<!--$(document).ready( () => {-->
+  <!--// Buttons from payment options. view_herper function implements modal styles-->
+  <!--let $btnSubs1 = $("#stripe-button1").on('click',vendor_helper.modal.StyleFirstOption);-->
+  <!--let $btnSubs2 = $("#stripe-button2").on('click',vendor_helper.modal.StyleSecondOption);-->
+  <!--let $btnSubs3 = $("#stripe-button3").on('click',vendor_helper.modal.StyleThirdOption);-->
+  <!--// Stripe html node form, stripe elements .-->
+  <!--let $form = $('#stripe-form')-->
+  <!--let stripe = Stripe("<%=process.env.STRIPE_PUBLISH_TEST_KEY%>");-->
+  <!--let elements = stripe.elements();-->
+  <!--let card = elements.create('card', {-->
+    <!--style: {-->
+      <!--base: {-->
+        <!--iconColor: '#666EE8',-->
+        <!--color: '#31325F',-->
+        <!--lineHeight: '40px',-->
+        <!--fontWeight: 300,-->
+        <!--fontFamily: '"Helvetica Neue", Helvetica, sans-serif',-->
+        <!--fontSize: '15px',-->
+
+        <!--'::placeholder': {-->
+          <!--color: '#CFD7E0',-->
+        <!--},-->
+      <!--},-->
+    <!--}-->
+  <!--});-->
+
+  <!--// Set Stripe publishable test key-->
+  <!--Stripe.setPublishableKey("<%=process.env.STRIPE_PUBLISH_TEST_KEY%>")-->
+  <!--card.mount('#card-element');-->
+
+  <!--setupform()-->
+
+  <!--// Submits the form-->
+  <!--function setupform () {-->
+    <!--$form.submit( (event) => {-->
+      <!--alert("submited form")-->
+      <!--event.preventDefault()-->
+      <!--$(this).find("input[id=stripeToken]").prop("disabled", true)-->
+      <!--processCard()-->
+      <!--return false-->
+    <!--})-->
+  <!--}-->
+
+  <!--// In charge of creating the token.-->
+  <!--function processCard () {-->
+    <!--let extraDetails = {-->
+        <!--name: $form.find('input[name=cardholder-name]').value,-->
+        <!--email: $form.find('input[name=email]').value-->
+    <!--};-->
+    <!--stripe.createToken(card, extraDetails).then(setOutcome);-->
+  <!--}-->
+
+  <!--// Append token to the form and setLayout for success and error messages-->
+  <!--function setOutcome(result) {-->
+    <!--let successElement = document.querySelector('.success');-->
+    <!--let errorElement = document.querySelector('.error');-->
+
+    <!--if (result.token) {-->
+      <!--// Use the token to create a charge or a customer-->
+      <!--successElement.querySelector('.token').textContent = result.token.id;-->
+      <!--successElement.classList.add('visible');-->
+      <!--alert(result.token.id)-->
+      <!--// Assign token value to the hidden field stripe-form-->
+      <!--$form.append($("<input type='hidden' id='stripeToken' name='stripeToken' />").val(result.token.id))-->
+      <!--$form.append($("<input type='hidden' name='paymentOptionId' />").val(vendor_helper.field.getPaymentOptionId))-->
+      <!--$form.append($("<input type='hidden' name='businessName' />").val(vendor_helper.field.getBusinessName))-->
+      <!--$form.append($("<input type='hidden' name='businessEmail' />").val(vendor_helper.field.getBusinessEmail))-->
+      <!--$form.append($("<input type='hidden' name='name' />").val(vendor_helper.field.getName))-->
+      <!--$form.append($("<input type='hidden' name='phone' />").val(vendor_helper.field.getPhone))-->
+      <!--$form[0].submit()-->
+    <!--}-->
+    <!--else {-->
+      <!--errorElement.textContent = result.error.message;-->
+      <!--errorElement.classList.add('visible');-->
+      <!--$("#card_error").text(response.error.message);-->
+      <!--$form.find("input[id=stripeToken]").prop("disabled",false)-->
+    <!--}-->
+    <!--successElement.classList.remove('visible');-->
+    <!--errorElement.classList.remove('visible');-->
+  <!--}-->
+<!--});-->
+<!--</script>-->

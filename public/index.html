@@ -1,0 +1,524 @@
+<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Introducing Lollipop, a sweet new take on Android.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <!--<title>Android</title>-->
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.min.css">
+    <link rel="stylesheet" href="../public/styles.css">
+      <!-- load MUI -->
+      <link href="//cdn.muicss.com/mui-0.9.16/css/mui.min.css" rel="stylesheet" type="text/css" />
+      <script src="//cdn.muicss.com/mui-0.9.16/js/mui.min.js"></script>
+      <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="//load.sumome.com/"
+              data-sumo-site-id="8ba594c3659c8652d4e8cb8d3c8b9066a72fa05a1664ee2a6caf6179362bd0fa" async="async"></script>
+      <script defer src="https://js.stripe.com/v2/"></script>
+      <script defer src="../javascripts/vendor_helper.js"></script>
+  </head>
+  <body>
+  <div class="mdl-layout__container mdl-js-layout mdl-layout--fixed-header background">
+      <div class="android-header mdl-layout__header mdl-layout__header--waterfall">
+          <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">
+            <img class="logo" src="../images/E-min.png">
+          </span>
+              <span class="mdl-layout-title">
+              <img style="padding-top: 8px" class="logo" src="../images/Eventmakr_name.png">
+          </span>
+
+          </div>
+      </div>
+
+      <div class="android-content mdl-layout">
+          <div class="max-width">
+              <a name="top"></a>
+
+              <div class="mdl-typography--text-center">
+                  <div>
+                      <div class="mui-container">
+                          <div class="logo-font android-slogan">
+                              <h1 class="visible mdl-typography--display-1">Welcome To Eventmakr</h1>
+                              <h1 class="visible2 mdl-typography--display-2">Welcome To Eventmakr</h1>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--youtube video-->
+              <div class="mdl-cell mdl-cell--12-col mdl-cell--8-tablet mdl-shadow--2dp mdl-card">
+                  <div class="youtube-container">
+                      <iframe
+                              src="https://www.youtube.com/embed/bnNhBa542Is?ecver=2"
+                              width="640"
+                              height="360"
+                              frameborder="0"
+                              style="position:absolute;width:100%;height:100%;left:0"
+                              allowfullscreen>
+                      </iframe>
+                  </div>
+              </div>
+
+
+              <div class="mdl-cell mdl-card android-be-together-section mdl-typography--text-center">
+                  <div class="top-container">
+                      <!--<div class="mui-container" style="position: relative">-->
+                          <img class="tablet-mock" src="../images/mockhands.png">
+                          <!--<img class="tablet-photo" src="images/tab.png">-->
+                      <!--</div>-->
+
+                  </div>
+              </div>
+
+              <div>
+                  <div class="mdl-grid mdl-typography--text-center">
+                      <a name="screens"></a>
+                      <div class="mdl-card-data mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdc-typography--body2 mdc-typography--adjust-margin">A
+                          market for communities to order all
+                          for special occasions, gatherings, and events.<br> Eventmakr will offer retailers and vendors
+                          a
+                          platform
+                          to display and market their products and services in a one-stop shop.
+                      </div>
+                      <div class="mdl-card-data mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet">
+                          <h2 class="mdc-typography--display2 mdc-typography--adjust-margin">Want To Learn More?</h2>
+                      </div>
+                      <div class="mdl-card-data mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdc-typography--body2 mdc-typography--adjust-margin">Sign
+                          up for more information - we are currently
+                          in development and spreading the word.<br>
+                          Fill in your business e-mail below, and we'll contact you with details.
+                      </div>
+                  </div>
+              </div>
+
+              <div class="mdl-cell mdl-card mdl-shadow--2dp mdl-cell--12-col mdl-cell--8-col-tablet">
+                  <div>
+                      <img class="phone-mock" src="../images/mock3.png">
+
+                  </div>
+              </div>
+
+              <!--payment cards-->
+              <div class="mdl-grid">
+                  <!-- subscription 1 -->
+                  <div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet card-image1">
+                      <div class="subscription-header mdl-typography--text-center">
+                          <h4 class="mdl-typography--display-1">Grow Leads</h4>
+                      </div>
+                      <div class="content-container subscription-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                          <div class="mdl-typography--text-center">
+                              <h4 class="mdl-typography--display-1">$59.99</h4>
+                              <h4 class="mdl-typography--headline">Beta Special</h4>
+                              <h5 class="mdl-typography--title">Get two months for the price of one</h5>
+                          </div>
+                          <div class="mdl-tabs__panel is-active mdl-card--border mdl-card__actions" id="perk-panel">
+                              <div class="subscription-content-desc">
+                                  <ul class="demo-list-item mdl-list">
+                                      <li class="mdl-list__item list-text">
+                                <span class="mdl-list__item-primary-content mdl-card--border subscription-content">
+                                  <i class="material-icons  mdl-list__item-avatar">business</i>
+                                  Your business will be accessed through location based search
+                                </span>
+                                      </li>
+                                  </ul>
+                              </div>
+                              <div class="mdl-card__actions mdl-card--border pay-button-container">
+                                  <a href="#join-panel" class="mdl-tabs__tab pay-button">
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent pay-button"
+                                              name="sub" value="sub1">JOIN
+                                      </button>
+                                  </a>
+                              </div>
+
+                          </div>
+
+                          <div class="mdl-tabs__panel" id="join-panel">
+                              <form class="signup" action="/vendors" method="POST">
+                                  <div class="mui-container">
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessEmail">Business Email</label>
+                                          <input class="form-control input-box" name="businessEmail" type="email"
+                                                 id="business-email" placeholder="yourbusinessemail@example.com"
+                                                 aria-describedby="emailHelp" value="somthing@gmail.com">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessName">Business Name</label>
+                                          <input class="form-control input-box" name="businessName" type="text"
+                                                 id="business-name" placeholder="My Business" value="mysdfsaldfsaljf">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="name">Your Name</label>
+                                          <input class=" form-control input-box" name="name" type="text" id="name"
+                                                 placeholder="John Doe" value="john doe">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessphoneNumber">Business Phone Number</label>
+                                          <input class="input-box form-control" name="phone" type="number" id="phone"
+                                                 placeholder="(555)-555-5555" value="5555555555">
+                                      </div>
+                                  </div>
+                              </form>
+                              <div class="mdl-card__actions mdl-card--border pay-button-container">
+                                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent pay-button"
+                                          id="stripe-button1" name="sub" value="sub1">Choose this plan
+                                  </button>
+                              </div>
+
+                          </div>
+                      </div>
+                  </div>
+                  <!-- subscription 2 -->
+                  <div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet card-image2">
+                      <div class="subscription-header mdl-typography--text-center">
+                          <h4 class="mdl-typography--display-1">Capture Leads</h4>
+                      </div>
+                      <div class="content-container subscription-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                          <div class="mdl-typography--text-center">
+                              <h4 class="mdl-typography--display-1">$199.99</h4>
+                              <h4 class="mdl-typography--headline">Beta Special</h4>
+                              <h5 class="mdl-typography--title">Get two months for the price of one</h5>
+                          </div>
+                          <div class="mdl-tabs__panel is-active mdl-card--border mdl-card__actions" id="perk-panel">
+                              <div class="subscription-content-desc">
+                                  <ul class="demo-list-item mdl-list">
+                                      <li class="mdl-list__item list-text">
+                                <span class="mdl-list__item-primary-content mdl-card--border subscription-content">
+                                  <i class="material-icons  mdl-list__item-avatar">business</i>
+                                  Your business will be accessed through location based search
+                                </span>
+                                      </li>
+                                      <li class="mdl-list__item list-text">
+                                <span class="mdl-list__item-primary-content mdl-card--border subscription-content">
+                                    <i class="material-icons  mdl-list__item-avatar">business</i>
+                      You'll be featured on our Intro page and will be suggested in searches fitting your niche or category in searches fitting your niche or category.
+                                 </span>
+                                      </li>
+                                  </ul>
+                              </div>
+
+                              <div class="mdl-card__actions mdl-card--border pay-button-container">
+                                  <a href="#join-panel" class="mdl-tabs__tab pay-button">
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent pay-button"
+                                              name="sub" value="sub1">JOIN
+                                      </button>
+                                  </a>
+                              </div>
+                          </div>
+
+                          <div class="mdl-tabs__panel" id="join-panel">
+                              <form class="signup" action="/vendors" method="POST">
+                                  <div class="mui-container">
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessEmail">Business Email</label>
+                                          <input class=" form-control input-box" name="businessEmail" type="email"
+                                                 id="business-email" placeholder="yourbusinessemail@example.com"
+                                                 aria-describedby="emailHelp">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessName">Business Name</label>
+                                          <input class=" form-control input-box" name="businessName" type="text"
+                                                 id="business-name" placeholder="My Business">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="name">Your Name</label>
+                                          <input class=" form-control input-box" name="name" type="text" id="name"
+                                                 placeholder="John Doe">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessphoneNumber">Business Phone Number</label>
+                                          <input class="input-box form-control" name="phone" type="number" id="phone"
+                                                 placeholder="(555)-555-5555">
+                                      </div>
+                                  </div>
+                              </form>
+                              <div class="mdl-card__actions mdl-card--border pay-button-container">
+                                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent pay-button"
+                                          id="stripe-button2" name="sub" value="sub2">Choose this plan
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- subscription 3 -->
+                  <div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet card-image3">
+                      <div class="subscription-header mdl-typography--text-center">
+                          <h4 class="mdl-typography--display-1">Maximize</h4>
+                      </div>
+                      <div class="content-container subscription-content mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                          <div class="mdl-typography--text-center">
+                              <h4 class="mdl-typography--display-1">$299.99</h4>
+                              <h4 class="mdl-typography--headline">Beta Special</h4>
+                              <h5 class="mdl-typography--title">Get two months for the price of one</h5>
+                          </div>
+                          <div class="mdl-tabs__panel is-active mdl-card--border mdl-card__actions" id="perk-panel">
+                              <div>
+                                  <ul class="demo-list-item mdl-list">
+                                      <li class="mdl-list__item list-text">
+                            <span class="mdl-list__item-primary-content mdl-card--border subscription-content">
+                              <i class="material-icons  mdl-list__item-avatar">business</i>
+                              Your business will be accessed through location based search
+                            </span>
+                                      </li>
+                                      <li class="mdl-list__item list-text">
+                            <span class="mdl-list__item-primary-content mdl-card--border subscription-content">
+                                <i class="material-icons  mdl-list__item-avatar">business</i>
+                  You'll be featured on our Intro page and will be suggested in searches fitting your niche or category in searches fitting your niche or category.
+                             </span>
+                                      </li>
+                                      <li class="mdl-list__item list-text">
+                            <span class="mdl-list__item-primary-content mdl-card--border subscription-content">
+                                <i class="material-icons  mdl-list__item-avatar">business</i>
+                              Eventmakr will create a social media marketing campaign for your product/service and direct traffic to your to your store in our marketplace.
+                            </span>
+                                      </li>
+                                  </ul>
+                              </div>
+
+                              <div class="mdl-card__actions mdl-card--border pay-button-container">
+                                  <a href="#join-panel" class="mdl-tabs__tab pay-button">
+                                      <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent pay-button"
+                                              name="sub" value="sub1">JOIN
+                                      </button>
+                                  </a>
+                              </div>
+                          </div>
+
+                          <div class="mdl-tabs__panel" id="join-panel">
+                              <form class="signup" action="/vendors" method="POST">
+                                  <div class="mui-container">
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessEmail">Business Email</label>
+                                          <input class=" form-control input-box" name="businessEmail" type="email"
+                                                 id="business-email" placeholder="yourbusinessemail@example.com"
+                                                 aria-describedby="emailHelp">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessName">Business Name</label>
+                                          <input class=" form-control input-box" name="businessName" type="text"
+                                                 id="business-name" placeholder="My Business">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="name">Your Name</label>
+                                          <input class=" form-control input-box" name="name" type="text" id="name"
+                                                 placeholder="John Doe">
+                                      </div>
+                                      <div class="mdl-textfield mdl-js-textfield">
+                                          <label for="businessphoneNumber">Business Phone Number</label>
+                                          <input class="input-box form-control" name="phone" type="number" id="phone"
+                                                 placeholder="(555)-555-5555">
+                                      </div>
+                                  </div>
+                              </form>
+                              <div class="mdl-card__actions mdl-card--border pay-button-container">
+                                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent pay-button"
+                                          id="stripe-button3" name="sub" value="sub3">Choose this plan
+                                  </button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <!--How Eventmakr Works-->
+              <div class="mdl-cell steps mdl-card center-text mdl-shadow--2dp">
+                  <div class="mdl-typography--text-center">
+                      <h1 class="mdl-typography--display-3 white-text">How Eventmakr Works</h1>
+                  </div>
+
+                  <div class="mdl-grid logo-font">
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet"></div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                          <i class="material-icons" style="font-size:64px;color:#029F5C">event</i>
+                          <p class="steps-copy mdl-typography--headline">Enter your occasion details.</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                          <i class="material-icons" style="font-size:64px;color:#029F5C">format_list_bulleted</i>
+                          <p class="steps-copy mdl-typography--headline">Get a list of local vendors.</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet"></div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                          <i class="material-icons" style="font-size:64px;color:#029F5C">chat</i>
+                          <p class="steps-copy mdl-typography--headline">Arrange & confirm orders through text or email
+                              in our chat feature.</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                          <i class="material-icons" style="font-size:64px;color:#029F5C">payment</i>
+                          <p class="steps-copy mdl-typography--headline">Close all transactions securely through our
+                              platform.</p>
+                      </div>
+                      <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone">
+                          <i class="material-icons" style="font-size:64px;color:#029F5C">local_shipping</i>
+                          <p class="steps-copy mdl-typography--headline">Receive or pick up your orders.</p>
+                      </div>
+                  </div>
+              </div>
+
+              <!--footer-->
+              <footer class="mdl-cell mdl-card android-footer mdl-mega-footer">
+                  <div class="mdl-mega-footer--middle-section">
+                      <div class="mdl-grid">
+                          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                              <a class="mdl-typography--font-light" href="#top">
+                                  Back to Top
+                                  <i class="material-icons">expand_less</i>
+                              </a>
+                          </div>
+                          <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--2-col-phone">
+                              <p class="mdl-typography--font-light">Eventmakr: © 2017</p>
+                          </div>
+                          <div class="mdl-cell mdl-cell--4-col mdl-cell--8-col-tablet mdl-cell--4-col-phone">
+                              <p class="contact">Questions? Contact Us: subscriptions@eventmakrvendors.com</p>
+                          </div>
+                      </div>
+                  </div>
+              </footer>
+
+              <!--stripe modal-->
+              <script src="https://js.stripe.com/v3/"></script>
+              <div class="modal" id="stripe-modal">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <span class="close">&times;</span>
+                          <img class="logo" src="../images/E-min.png"/>
+                          <!--Modal Header-->
+                      </div>
+                      <form class="form" id="stripe-form" action="/vendors" method="POST">
+                          <div class="group">
+                              <label class="label"><span class="span">Name</span>
+                                  <input name="cardholder-name" class="field" placeholder="Jane Doe" value="Jane Doe"/>
+                              </label>
+                              <label class="label"><span class="span">Email</span>
+                                  <input name="email" class="field" placeholder="example@email.com" value="example@gmail.com"/>
+                              </label>
+                              <label class="label"><span class="span">Phone</span>
+                                  <input class="field" placeholder="(123) 456-7890" type="tel" value="1233211233"/>
+                              </label>
+                          </div>
+                          <div class="group">
+                              <label for="card-element" class="label"><span class="span">Card</span>
+                                  <div id="card-element" class="field"></div>
+                          </div>
+                          <button class="button" type="submit">Pay</button>
+                          <div class="outcome">
+                              <div class="error" id="card-errors"></div>
+                              <div class="success">
+                                  Success! Your Stripe token is <span class="token"></span>
+                              </div>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+
+              <script>
+
+                  $(document).ready( () => {
+                      // Buttons from payment options. view_herper function implements modal styles
+                  let $btnSubs1 = $("#stripe-button1").on('click',vendor_helper.modal.StyleFirstOption);
+                  let $btnSubs2 = $("#stripe-button2").on('click',vendor_helper.modal.StyleSecondOption);
+                  let $btnSubs3 = $("#stripe-button3").on('click',vendor_helper.modal.StyleThirdOption);
+                  // Stripe html node form, stripe elements .
+                  let $form = $('#stripe-form')
+                  let stripe = Stripe("<%=process.env.STRIPE_PUBLISH_TEST_KEY%>");
+                  let elements = stripe.elements();
+                  let card = elements.create('card', {
+                      style: {
+                          base: {
+                              iconColor: '#666EE8',
+                              color: '#31325F',
+                              lineHeight: '40px',
+                              fontWeight: 300,
+                              fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                              fontSize: '15px',
+
+                              '::placeholder': {
+                                  color: '#CFD7E0',
+                              },
+                          },
+                      }
+                  });
+
+                  // Set Stripe publishable test key
+                  Stripe.setPublishableKey("<%=process.env.STRIPE_PUBLISH_TEST_KEY%>")
+                  card.mount('#card-element');
+
+                  setupform()
+
+                  // Submits the form
+                  function setupform () {
+                      $form.submit( (event) => {
+                          alert("submited form")
+                      event.preventDefault()
+                      $(this).find("input[id=stripeToken]").prop("disabled", true)
+                      processCard()
+                      return false
+                  })
+                  }
+
+                  // In charge of creating the token.
+                  function processCard () {
+                      let extraDetails = {
+                          name: $form.find('input[name=cardholder-name]').value,
+                          email: $form.find('input[name=email]').value
+                      };
+                      stripe.createToken(card, extraDetails).then(setOutcome);
+                  }
+
+                  // Append token to the form and setLayout for success and error messages
+                  function setOutcome(result) {
+                      let successElement = document.querySelector('.success');
+                      let errorElement = document.querySelector('.error');
+
+                      if (result.token) {
+                          // Use the token to create a charge or a customer
+                          successElement.querySelector('.token').textContent = result.token.id;
+                          successElement.classList.add('visible');
+                          alert(result.token.id)
+                          // Assign token value to the hidden field stripe-form
+                          $form.append($("<input type='hidden' id='stripeToken' name='stripeToken' />").val(result.token.id))
+                          $form.append($("<input type='hidden' name='paymentOptionId' />").val(vendor_helper.field.getPaymentOptionId))
+                          $form.append($("<input type='hidden' name='businessName' />").val(vendor_helper.field.getBusinessName))
+                          $form.append($("<input type='hidden' name='businessEmail' />").val(vendor_helper.field.getBusinessEmail))
+                          $form.append($("<input type='hidden' name='name' />").val(vendor_helper.field.getName))
+                          $form.append($("<input type='hidden' name='phone' />").val(vendor_helper.field.getPhone))
+                          $form[0].submit()
+                      }
+                      else {
+                          errorElement.textContent = result.error.message;
+                          errorElement.classList.add('visible');
+                          $("#card_error").text(response.error.message);
+                          $form.find("input[id=stripeToken]").prop("disabled",false)
+                      }
+                      successElement.classList.remove('visible');
+                      errorElement.classList.remove('visible');
+                  }
+                  });
+              </script>
+          </div>
+      </div>
+  </div>
+  </body>
+<
